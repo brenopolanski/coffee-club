@@ -1,0 +1,15 @@
+{
+  "name": "coffee-club",
+  "description": "Hackspace - The Coffee Club",
+  "website": "https://github.com/brenopolanski/coffee-club#readme",
+  "repository": "https://github.com/brenopolanski/coffee-club",
+  "keywords": ["hackspace", "coffee-club"],
+  "env": {
+    "OAUTH_CLIENT_ID": "",
+    "OAUTH_CLIENT_SECRET": "",
+    "OAUTH_HOST": "github.com",
+    "OAUTH_PORT": "443",
+    "OAUTH_PATH": "/login/oauth/access_token",
+    "OAUTH_METHOD": "POST"
+  }
+}
