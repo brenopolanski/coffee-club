@@ -5,7 +5,7 @@ var bodyParser     = require('body-parser');
 var cookieParser   = require('cookie-parser');
 var expressSession = require('express-session');
 var methodOverride = require('method-override');
-// var error          = require('./middlewares/error');
+var error          = require('./middlewares/error');
 var app            = express();
 
 app.set('views', __dirname + '/views');
@@ -22,8 +22,8 @@ load('models')
 	.then('routes')
 	.into(app);
 
-// app.use(error.notFound);
-// app.use(error.serverError);
+app.use(error.notFound);
+app.use(error.serverError);
 
 // var port = process.env.PORT || config.port || 9999;
 var port = process.env.PORT || 9999;
