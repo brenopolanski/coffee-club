@@ -30,5 +30,8 @@
     "express-session": "^1.12.1",
     "github-api": "^0.10.7",
     "method-override": "^2.3.5"
+  },
+  "engines": {
+    "node": "0.12.7"
   }
 }
