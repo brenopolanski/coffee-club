@@ -1,9 +1,9 @@
 'use strict';
 
-var https  = require('https');
-var qs     = require('querystring');
+var https      = require('https');
+var qs         = require('querystring');
 var loadConfig = require('../utils/loadConfig');
-var config = loadConfig();
+var config     = loadConfig();
 
 function authenticate(code, cb) {
 	var data = qs.stringify({
@@ -45,7 +45,14 @@ module.exports = function(app) {
 		code: function(req, res) {
 			authenticate(req.params.code, function(err, token) {
 				var result = err || !token ? { 'error': 'bad_code' } : { 'token': token };
-				res.json(result);
+				
+				if (result && result.token) {
+					app.token = result.token;
+					res.redirect('/home');
+				}
+				else {
+					res.json(result);
+				}
 			});
 		}
 	};
