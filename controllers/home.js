@@ -15,14 +15,21 @@ module.exports = function(app) {
 
 			user.show(null, function(err, user) {
 				if (err) {
-					console.log(err);
+					res.redirect('/');
 				}
 				else {
+					req.session.user = user.login;
 					res.render('home/index', user);
 				}
 			});
 
 			// console.log(app.token);
+		},
+
+		logout: function(req, res) {
+			app.token = null;
+			req.session.destroy();
+			res.redirect('/');
 		}
 	};
 

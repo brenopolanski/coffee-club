@@ -5,6 +5,7 @@ var qs         = require('querystring');
 var loadConfig = require('../utils/loadConfig');
 var config     = loadConfig();
 
+// add this code in utils/authenticate.js
 function authenticate(code, cb) {
 	var data = qs.stringify({
 		client_id: config.oauth_client_id,
@@ -45,7 +46,7 @@ module.exports = function(app) {
 		code: function(req, res) {
 			authenticate(req.params.code, function(err, token) {
 				var result = err || !token ? { 'error': 'bad_code' } : { 'token': token };
-				
+
 				if (result && result.token) {
 					app.token = result.token;
 					res.redirect('/home');
