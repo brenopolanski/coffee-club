@@ -30,5 +30,5 @@ module.exports = function(app) {
 		guests          : [guest]
 	});
 
-	return db.model('usuarios', user);
+	return db.model('users', user);
 };

@@ -26,7 +26,7 @@ module.exports = function(app) {
 						.select('github_id name profile_image')
 						.exec(function(err, user) {
 							if (user) {
-								req.session.user = user.github_id;
+								req.session.user = user._id;
 								res.render('home/index', user);
 							}
 							else {
@@ -48,7 +48,7 @@ module.exports = function(app) {
 										res.redirect('/');
 									}
 									else {
-										req.session.user = user.github_id;
+										req.session.user = user._id;
 										res.render('home/index', user);
 									}
 								});
