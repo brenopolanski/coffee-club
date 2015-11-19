@@ -5,4 +5,5 @@ module.exports = function(app) {
 	// change for "post" after
 	// app.post('/coffee/:id', coffees.create);
 	app.get('/coffee/:id', coffees.create);
+	app.get('/coffee/guest/:id', coffees.create_guest);
 };
