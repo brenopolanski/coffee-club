@@ -4,18 +4,18 @@ module.exports = function(app) {
 	var Schema = require('mongoose').Schema;
 
 	var coffee = Schema({
-		amount : { type: Integer },
+		amount : { type: String },
 		flavor : { type: String },
 		date   : { type: String, required: true }
 	});
 
 	var guest = Schema({
-		amount : { type: Integer },
+		amount : { type: String },
 		flavor : { type: String },
 		date   : { type: String, required: true }
 	});
 
-	var usuario = Schema({
+	var user = Schema({
 		name            : { type: String, required: true },
 		email           : { type: String, required: true, index: { unique: true } },
 		company         : { type: String },
@@ -30,5 +30,5 @@ module.exports = function(app) {
 		guests          : [guest]
 	});
 
-	return db.model('usuarios', usuario);
+	return db.model('usuarios', user);
 };
