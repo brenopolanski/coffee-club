@@ -25,8 +25,8 @@ load('models')
 	.then('routes')
 	.into(app);
 
-// app.use(error.notFound);
-// app.use(error.serverError);
+app.use(error.notFound);
+app.use(error.serverError);
 
 // var port = process.env.PORT || config.port || 9999;
 var port = process.env.PORT || 9999;
