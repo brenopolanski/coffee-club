@@ -23,7 +23,7 @@ module.exports = function(app) {
 					var query = { github_id: data.id };
 
 					UserModel.findOne(query)
-						.select('github_id name profile_image')
+						.select('github_id name profile_image coffees')
 						.exec(function(err, user) {
 							if (user) {
 								req.session.user = user._id;
