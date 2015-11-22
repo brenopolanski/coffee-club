@@ -35,5 +35,9 @@
   },
   "engines": {
     "node": "0.12.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-stylus": "^2.1.0"
   }
 }

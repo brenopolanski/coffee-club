@@ -1,35 +1,94 @@
-<% include ../header %>
-	<header>
-		<h1>Hackspace</h1>
-		<h4>The Coffee Club</h4>
-	</header>
-	<section>
-		<ul>
-			<li>Name: <%- name %></li>
-			<li>avatar_url: <img src="<%- profile_image %>" width="100" height="100" /></li>
-		</ul>
-		<table>
-			<thead>
-				<tr>
-					<th>Date</th>
-					<th>Amount</th>
-				</tr>
-			</thead>
-			<tbody>
-				<% coffees.forEach(function(coffee) { %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home | The Coffee Club</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/tablesaw.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="app-wrap">
+		<header class="header">
+			<img src="<%- profile_image %>">
+			
+			<h1 class="home-title">The Coffee Club</h1>
+
+			<a href="/exit" class="button">
+				<i class="fa fa-power-off"></i>
+				Logout
+			</a>
+		</header>
+
+		<section class="content">
+			<table class="tablesaw" data-tablesaw-mode="stack">
+				<thead>
 					<tr>
-						<td><%- coffee.date %></td>
-						<td><%- coffee.amount %></td>
+						<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Date</th>
+						<th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">Amount</th>
 					</tr>
-				<% }); %>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>Totals:</td>
-					<td><%- coffees.length %></td>
-				</tr>
-			</tfoot>
-		</table>
-		<a href="/coffee/<%- _id %>">Add Coffee</a> | <a href="/coffee/guest/<%- _id %>">Add guest friend Hackspace</a> | <a href="/exit">Exit</a>
-	</section>
-<% include ../footer %>
+				</thead>
+				<tbody>
+					<% coffees.forEach(function(coffee) { %>
+						<tr>
+							<td class="title"><%- coffee.date %></td>
+							<td><%- coffee.amount %></td>
+						</tr>
+					<% }); %>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Totals:</td>
+						<td><%- coffees.length %></td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+		
+		<nav class="nav">
+			<a href="javascript:void(0);" onclick="confirmAdd();">
+				<i class="fa fa-coffee"></i>
+				Add
+			</a>
+			<a href="javascript:void(0);" onclick="confirmGuest();">
+				<i class="fa fa-user-plus"></i>
+				Guest
+			</a>
+			<a href="javascript:void(0);">
+				<i class="fa fa-bar-chart"></i>
+				Report
+			</a>
+		</nav>
+	</div>
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/tablesaw.js"></script>
+	<script src="js/notie.js"></script>
+	<script>
+		$(function() {
+			$(document).trigger('enhance.tablesaw');
+		});
+	
+        function confirmAdd() {
+            notie.confirm('Add coffee for you?', 'Yes', 'Cancel', function() {
+            	// window.open('http://localhost:8000/home.html?add=true');
+                notie.alert(1, 'Added with success!', 1.5);
+                setTimeout(function(argument) {
+            		window.location = '/coffee/<%- _id %>';
+                }, 1500);
+            });
+        }
+
+        function confirmGuest() {
+            notie.confirm('Add coffee for the guest?', 'Yes', 'Cancel', function() {
+            	// window.open('http://localhost:8000/home.html?add=true');
+                notie.alert(2, 'Added with success!', 1.5);
+                setTimeout(function(argument) {
+            		window.location = '/coffee/guest/<%- _id %>';
+                }, 1500);
+            });
+        }
+	</script>
+</body>
+</html>

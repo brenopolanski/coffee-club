@@ -1,9 +1,32 @@
-<% include ../header %>
-	<header>
-		<h1>Hackspace</h1>
-		<h4>The Coffee Club</h4>
-	</header>
-	<section>
-		<a href="<%- url %>">Login with GitHub</a>
-	</section>
-<% include ../footer %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login | The Coffee Club</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="app-wrap">
+		<header class="header">	
+			<h1>The Coffee Club</h1>
+		</header>
+
+		<section class="content">
+			<div class="container-center">
+				<a href="<%- url %>" class="button login">
+					<i class="fa fa-github"></i>
+					Login with GitHub
+				</a>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container-center">
+				<p>Made with <span class="love">♥</span> by CG Hackspace</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

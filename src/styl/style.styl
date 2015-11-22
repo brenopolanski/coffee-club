@@ -1,10 +1,10 @@
 // @import './_normalize'
 
 *, *:before, *:after
-	box-sizing: inherit;
+	box-sizing inherit
 
 html
-	box-sizing: border-box;
+	box-sizing border-box
 	font-size 10px
 	
 body
@@ -20,6 +20,10 @@ a
 		background #75715e
 		padding 1rem 1.5rem
 		border-radius 4px
+		
+	&.login
+		padding 2rem 2.5rem
+		font-size 2.5rem
 
 h1
 	color #75715e
@@ -45,7 +49,6 @@ h1
 	border-top 1px solid #e6e6e6
 	
 .nav
-	
 	a
 		text-align center
 		padding 1.5rem
@@ -66,6 +69,26 @@ h1
 		color white
 		text-shadow 3px 3px 0 rgba(0,0,0,0.1)
 		padding-bottom 1rem
+		
+.footer
+	background #272822
+	
+.footer
+	p
+		color #fff
+	
+.love
+	color #e74c3c
+	display inline-block
+	font-size 1.4em
+	position relative
+	top 0.2em
+	transform scale(0.9)
+	animation love 0.5s infinite linear alternate-reverse
+
+@keyframes love {
+    to { transform: scale(1.2); }
+}
 
 .app-wrap
 	display flex
@@ -83,9 +106,19 @@ h1
 	overflow-y scroll
 	-webkit-overflow-scrolling touch
 	
+.container-center
+	display flex
+	align-items center
+	justify-content center
+
 .nav
 	display flex
 	
 	a
 		flex 1
 		
+/* Small screens */
+
+@media all and (max-width: 500px)
+	.home-title
+		display none
