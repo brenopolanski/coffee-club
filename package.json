@@ -31,6 +31,7 @@
     "express-session": "^1.12.1",
     "github-api": "^0.10.7",
     "method-override": "^2.3.5",
+    "mongodb": "^2.0.49",
     "mongoose": "^4.2.6"
   },
   "engines": {

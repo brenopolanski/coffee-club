@@ -4,6 +4,7 @@
   "website": "https://github.com/brenopolanski/coffee-club#readme",
   "repository": "https://github.com/brenopolanski/coffee-club",
   "keywords": ["hackspace", "coffee-club"],
+  "addons": ["mongolab"],
   "env": {
     "OAUTH_CLIENT_ID": "",
     "OAUTH_CLIENT_SECRET": "",

@@ -9,7 +9,21 @@ var error          = require('./middlewares/error');
 var mongoose       = require('mongoose');
 var app            = express();
 
-global.db = mongoose.connect('mongodb://localhost/hscoffeeclub');
+var uristring = 
+	process.env.MONGOLAB_URI || 
+	process.env.MONGOHQ_URL || 
+	'mongodb://localhost/hscoffeeclub';
+
+// global.db = mongoose.connect('mongodb://localhost/hscoffeeclub');
+global.db = mongoose.connect(uristring, function(err, res) {
+	if (err) { 
+		console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+	} 
+	else {
+		console.log ('Succeeded connected to: ' + uristring);
+	}
+});
+
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
