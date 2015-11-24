@@ -35,6 +35,12 @@ Use the button below to instantly setup your own Coffee Club instance on Heroku.
    ```
    heroku apps:create APP_NAME
    ```
+   
+2. Add Addons MongoLab
+
+   ```
+   heroku addons:add mongolab
+   ```
 
 3. Provide OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
 
