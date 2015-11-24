@@ -31,4 +31,4 @@ For detailed changelog, see [Releases](https://github.com/brenopolanski/coffee-c
 
 ## License
 
-[MIT License](https://github.com/brenopolanski/blob/master/LICENSE)
+[MIT License](http://brenopolanski.mit-license.org/) © Breno Polanski
