@@ -15,6 +15,20 @@ Hackspace - The Coffee Club
 
 	$ node server.js
 
-# Mockups
+## Contributing
 
-![mockup1-coffee-club](https://cloud.githubusercontent.com/assets/1894191/11093796/fb6886d6-886a-11e5-861d-6bfd32a8bdd4.png)
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m "Add some feature"`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request  :)
+
+English is the universal language nowadays, so please don't create or comment on issues using another language.
+
+## History
+
+For detailed changelog, see [Releases](https://github.com/brenopolanski/coffee-club/releases).
+
+## License
+
+[MIT License](https://github.com/brenopolanski/blob/master/LICENSE)
