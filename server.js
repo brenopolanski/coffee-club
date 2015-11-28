@@ -40,8 +40,8 @@ load('models')
 app.use(error.notFound);
 app.use(error.serverError);
 
-// var port = process.env.PORT || config.port || 9999;
-var port = process.env.PORT || 9999;
+// var port = process.env.PORT || config.port || 3000;
+var port = process.env.PORT || 3000;
 
 app.listen(port, null, function(err) {
 	console.log('Listening on port %s...', port);
