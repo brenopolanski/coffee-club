@@ -12,9 +12,8 @@ var app            = express();
 var uristring = 
 	process.env.MONGOLAB_URI || 
 	process.env.MONGOHQ_URL || 
-	'mongodb://localhost/hscoffeeclub';
+	'mongodb://localhost/coffeeclub';
 
-// global.db = mongoose.connect('mongodb://localhost/hscoffeeclub');
 global.db = mongoose.connect(uristring, function(err, res) {
 	if (err) { 
 		console.log('ERROR connecting to: ' + uristring + '. ' + err);
@@ -24,11 +23,10 @@ global.db = mongoose.connect(uristring, function(err, res) {
 	}
 });
 
-
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(cors());
-app.use(cookieParser('hscoffeeclub'));
+app.use(cookieParser('coffeeclub'));
 app.use(expressSession());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

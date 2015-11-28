@@ -1,9 +1,9 @@
 {
   "name": "coffee-club",
-  "description": "Hackspace - The Coffee Club",
+  "description": "The Coffee Club",
   "website": "https://github.com/brenopolanski/coffee-club#readme",
   "repository": "https://github.com/brenopolanski/coffee-club",
-  "keywords": ["hackspace", "coffee-club"],
+  "keywords": ["coffee-club", "coworking", "hackspace"],
   "addons": ["mongolab"],
   "env": {
     "OAUTH_CLIENT_ID": "",

@@ -5,13 +5,11 @@ module.exports = function(app) {
 
 	var coffee = Schema({
 		amount : { type: String },
-		// flavor : { type: String },
 		date   : { type: String, required: true }
 	});
 
 	var guest = Schema({
 		amount : { type: String },
-		// flavor : { type: String },
 		date   : { type: String, required: true }
 	});
 
