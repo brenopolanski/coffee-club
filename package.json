@@ -11,8 +11,9 @@
     "url": "git+https://github.com/brenopolanski/coffee-club.git"
   },
   "keywords": [
+    "coffee-club",
+    "coworking",
     "hackspace",
-    "coffee-club"
   ],
   "author": "Breno Polanski",
   "license": "MIT",
