@@ -13,5 +13,5 @@ module.exports = gulp.task('stylus', function() {
 		.pipe(plumber())
 		.pipe(stylus())
 		.pipe(minifycss())
-		.pipe(gulp.dest(paths.build.app));
+		.pipe(gulp.dest(paths.build.css));
 });

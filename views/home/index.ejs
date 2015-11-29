@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home | The Coffee Club</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/tablesaw.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,38 +19,25 @@
 				Logout
 			</a>
 		</header>
-
 		<section class="content">
-			<table class="tablesaw" data-tablesaw-mode="stack">
-				<thead>
-					<tr>
-						<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Date</th>
-						<th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">Amount</th>
-					</tr>
-				</thead>
-				<tbody>
-					<% coffees.forEach(function(coffee) { %>
-						<tr>
-							<td class="title"><%- coffee.date %></td>
-							<td><%- coffee.amount %></td>
-						</tr>
-					<% }); %>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td>Totals:</td>
-						<td><%- coffees.length %></td>
-					</tr>
-				</tfoot>
-			</table>
+			<h1 class="month">November</h1>
+			<div class="progress-pie-chart" data-percent="<%- coffees.length %>">
+				<div class="ppc-progress">
+					<div class="ppc-progress-fill"></div>
+				</div>
+				<div class="ppc-percents">
+					<div class="pcc-percents-wrapper">
+						<span><i class="fa fa-coffee"></i></span>
+					</div>
+				</div>
+			</div>
 		</section>
-		
 		<nav class="nav">
-			<a href="javascript:void(0);" onclick="confirmAdd();">
-				<i class="fa fa-coffee"></i>
+			<a href="#add" id="btn-add-coffee">
+				<i class="fa fa-plus"></i>
 				Add
 			</a>
-			<a href="javascript:void(0);" onclick="confirmGuest();">
+			<a href="#guest" id="btn-add-guest">
 				<i class="fa fa-user-plus"></i>
 				Guest
 			</a>
@@ -62,33 +48,11 @@
 		</nav>
 	</div>
 
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="js/tablesaw.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="js/notie.js"></script>
+	<script src="js/app.js"></script>
 	<script>
-		$(function() {
-			$(document).trigger('enhance.tablesaw');
-		});
-	
-        function confirmAdd() {
-            notie.confirm('Add coffee for you?', 'Yes', 'Cancel', function() {
-            	// window.open('http://localhost:8000/home.html?add=true');
-                notie.alert(1, 'Added with success!', 1.5);
-                setTimeout(function(argument) {
-            		window.location = '/coffee/<%- _id %>';
-                }, 1500);
-            });
-        }
-
-        function confirmGuest() {
-            notie.confirm('Add coffee for the guest?', 'Yes', 'Cancel', function() {
-            	// window.open('http://localhost:8000/home.html?add=true');
-                notie.alert(2, 'Added with success!', 1.5);
-                setTimeout(function(argument) {
-            		window.location = '/coffee/guest/<%- _id %>';
-                }, 1500);
-            });
-        }
+		app.init('<%- _id %>');
 	</script>
 </body>
 </html>
