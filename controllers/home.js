@@ -47,7 +47,7 @@ module.exports = function(app) {
 							}
 							else {
 								var userData = {
-									name            : data.name,
+									name            : data.name || data.login,
 									email           : data.email,
 									company         : data.company,
 									blog            : data.blog,
@@ -66,7 +66,7 @@ module.exports = function(app) {
 									else {
 										user.month = month;
 										user.amount = amount;
-										
+
 										req.session.user = user._id;
 										res.render('home/index', user);
 									}
