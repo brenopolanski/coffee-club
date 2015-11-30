@@ -15,6 +15,14 @@ var app = (function($, window, document, undefined) {
 	'use strict';
 
 	var module = {
+		loadingPage: function() {
+			setTimeout(function() {
+				$('div#loading-page').fadeOut(function() {
+					$(this).remove();
+				});
+			}, 1000);
+		},
+		
 		progress: function() {
 			var $ppc = $('.progress-pie-chart');
 			var percent = parseInt($ppc.data('percent'));
@@ -50,21 +58,12 @@ var app = (function($, window, document, undefined) {
 	        });
 		},
 
-		loadingPage: function() {
-			setTimeout(function() {
-				$('div#loading-page').fadeOut(function() {
-					$(this).remove();
-					$('body').removeAttr('style');
-				});
-			}, 1000);
-		},
-
 		init: function(userID) {
 			var id = userID;
+			module.loadingPage();
 			module.progress();
 			module.confirmAdd(id);
 			module.confirmGuest(id);
-			module.loadingPage();
 		}
 	};
 

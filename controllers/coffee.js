@@ -6,7 +6,7 @@ var now        = new Date();
 module.exports = function(app) {
 	var UserModel = app.models.user;
 
-	var CoffeesController = {
+	var CoffeeController = {
 		create: function(req, res) {
 			var _id = req.session.user;
 			UserModel.findById(_id, function(err, user) {
@@ -38,5 +38,5 @@ module.exports = function(app) {
 		},
 	};
 
-	return CoffeesController;
+	return CoffeeController;
 };
