@@ -12,7 +12,7 @@ module.exports = function(app) {
 			UserModel.findById(_id, function(err, user) {
 				var coffee = {
 					amount: '1',
-					date: dateFormat(now, 'dddd, mmmm dS, yyyy, h:MM:ss TT')
+					date: dateFormat(now, 'dd-mmmm-yyyy')
 				};
 				var coffees = user.coffees;
 				coffees.push(coffee);
@@ -27,7 +27,7 @@ module.exports = function(app) {
 			UserModel.findById(_id, function(err, user) {
 				var coffeeGuest = {
 					amount: '1',
-					date: dateFormat(now, 'dddd, mmmm dS, yyyy, h:MM:ss TT')
+					date: dateFormat(now, 'dd-mmmm-yyyy')
 				};
 				var coffeeGuests = user.guests;
 				coffeeGuests.push(coffeeGuest);
