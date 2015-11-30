@@ -4,7 +4,8 @@ module.exports = {
 	source: {
 		bowerDir: './bower_components',
 		files: {
-			styl: './src/styl/style.styl'
+			styl: './src/styl/style.styl',
+			css: './public/css/style.css'
 		}
 	},
 
