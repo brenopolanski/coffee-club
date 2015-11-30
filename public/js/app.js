@@ -50,11 +50,21 @@ var app = (function($, window, document, undefined) {
 	        });
 		},
 
+		loadingPage: function() {
+			setTimeout(function() {
+				$('div#loading-page').fadeOut(function() {
+					$(this).remove();
+					$('body').removeAttr('style');
+				});
+			}, 1000);
+		},
+
 		init: function(userID) {
 			var id = userID;
 			module.progress();
 			module.confirmAdd(id);
 			module.confirmGuest(id);
+			module.loadingPage();
 		}
 	};
 
