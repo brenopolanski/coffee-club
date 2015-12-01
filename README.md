@@ -62,6 +62,11 @@ OR
 
 ### Desktop
 
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop1.png" width="400" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop2.png" width="400" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop3.png" width="400" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop4.png" width="400" />
+
 ### Mobile
 
 <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/mobile1.jpg" width="200" />
