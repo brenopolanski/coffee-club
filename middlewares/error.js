@@ -1,3 +1,5 @@
+'use strict';
+
 exports.notFound = function(req, res, next) {
 	res.status(404);
 	res.render('not-found');
