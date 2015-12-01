@@ -36,6 +36,10 @@ var app = (function($, window, document, undefined) {
 			$('.ppc-percents span').html(percent + ' <i class="fa fa-coffee"></i>');
 		},
 
+		tablesaw: function() {
+			$(document).trigger('enhance.tablesaw');
+		},
+
 		confirmAdd: function(id) {
 			$('#btn-add-coffee').on('click', function() {
 		        notie.confirm('Add coffee for you?', 'Yes', 'Cancel', function() {
@@ -62,6 +66,7 @@ var app = (function($, window, document, undefined) {
 			var id = userID;
 			module.loadingPage();
 			module.progress();
+			module.tablesaw();
 			module.confirmAdd(id);
 			module.confirmGuest(id);
 		}
