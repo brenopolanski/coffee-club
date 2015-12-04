@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/**/*.js"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha tests/**/*.js"
   },
   "repository": {
     "type": "git",
