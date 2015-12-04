@@ -1,7 +1,7 @@
 {
-  "oauth_client_id": "GITHUB_APPLICATION_CLIENT_ID",
-  "oauth_client_secret": "GITHUB_APPLICATION_CLIENT_SECRET",
-  "oauth_redirect_uri": "GITHUB_APPLICATION_REDIRECT",
+  "oauth_client_id": "27ea1ee40e7ace39f882",
+  "oauth_client_secret": "7080ae473e475a2820633d59129afe00adbbf3d6",
+  "oauth_redirect_uri": "http://localhost:3000/authenticate/",
   "oauth_scope": "user",
   "oauth_host": "github.com",
   "oauth_port": 443,

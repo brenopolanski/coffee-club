@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
+	var db     = require('../libs/db_connect')();
 	var Schema = require('mongoose').Schema;
 
 	var coffee = Schema({

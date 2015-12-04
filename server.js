@@ -1,3 +1,5 @@
+'use strict';
+
 var cors           = require('cors');
 var express        = require('express');
 var load           = require('express-load');
@@ -6,22 +8,22 @@ var cookieParser   = require('cookie-parser');
 var expressSession = require('express-session');
 var methodOverride = require('method-override');
 var error          = require('./middlewares/error');
-var mongoose       = require('mongoose');
+// var mongoose       = require('mongoose');
 var app            = express();
 
-var uristring = 
-	process.env.MONGOLAB_URI || 
-	process.env.MONGOHQ_URL || 
-	'mongodb://localhost/coffeeclub';
+// var uristring = 
+// 	process.env.MONGOLAB_URI || 
+// 	process.env.MONGOHQ_URL || 
+// 	'mongodb://localhost/coffeeclub';
 
-global.db = mongoose.connect(uristring, function(err, res) {
-	if (err) { 
-		console.log('ERROR connecting to: ' + uristring + '. ' + err);
-	} 
-	else {
-		console.log('Succeeded connected to: ' + uristring);
-	}
-});
+// global.db = mongoose.connect(uristring, function(err, res) {
+// 	if (err) { 
+// 		console.log('ERROR connecting to: ' + uristring + '. ' + err);
+// 	} 
+// 	else {
+// 		console.log('Succeeded connected to: ' + uristring);
+// 	}
+// });
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -46,3 +48,5 @@ var port = process.env.PORT || 3000;
 app.listen(port, null, function(err) {
 	console.log('Listening on port %s...', port);
 });
+
+module.exports = app;
