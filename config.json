@@ -8,5 +8,9 @@
   "oauth_path": "/login/oauth/access_token",
   "oauth_method": "POST",
   "port": 3000,
-  "members": ["brenopolanski"]
+  "members": ["brenopolanski"],
+  "mongodb": {
+    "test": "mongodb://localhost/coffeeclub_test",
+    "development": "mongodb://localhost/coffeeclub"
+  }
 }
