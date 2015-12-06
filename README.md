@@ -37,6 +37,7 @@
 	  }
 	}
 	```
+	Also see the [documentation on Github](https://developer.github.com/v3/oauth/).
 
 4. Serve it
 
