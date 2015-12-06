@@ -9,7 +9,8 @@ var expressSession = require('express-session');
 var methodOverride = require('method-override');
 var compression    = require('compression');
 var error          = require('./middlewares/error');
-var config         = require('./config.json');
+var loadConfig     = require('./utils/loadConfig');
+var config         = loadConfig();
 var app            = express();
 
 app.set('views', __dirname + '/views');

@@ -54,7 +54,7 @@ var app = (function($, window, document, undefined) {
 		confirmGuest: function(id) {
 			$('#btn-add-guest').on('click', function() {
 	            notie.confirm('Add coffee for the guest?', 'Yes', 'Cancel', function() {
-	                notie.alert(2, 'Added with success!', 1.5);
+	                notie.alert(1, 'Added with success!', 1.5);
 	                setTimeout(function(argument) {
 	            		window.location = '/coffee/guest/' + id;
 	                }, 1500);

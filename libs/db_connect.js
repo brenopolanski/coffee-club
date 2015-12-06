@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = function() {
-	var mongoose = require('mongoose');
-	var config   = require('../config.json');
+	var mongoose   = require('mongoose');
+	var loadConfig = require('../utils/loadConfig');
+	var config     = loadConfig();
 	var env = 
 		process.env.MONGOLAB_URI || 
 		process.env.MONGOHQ_URL ||
