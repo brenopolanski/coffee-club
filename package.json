@@ -1,11 +1,11 @@
 {
   "name": "coffee-club",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "The Coffee Club",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha tests/**/*.js"
+    "start": "DEBUG=* node server.js >> server.log",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/brenopolanski/coffee-club#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
     "cookie-parser": "^1.4.0",
     "cors": "^2.7.1",
     "dateformat": "^1.0.11",

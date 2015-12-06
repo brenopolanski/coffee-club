@@ -7,18 +7,20 @@ var bodyParser     = require('body-parser');
 var cookieParser   = require('cookie-parser');
 var expressSession = require('express-session');
 var methodOverride = require('method-override');
+var compression    = require('compression');
 var error          = require('./middlewares/error');
 var config         = require('./config.json');
 var app            = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.use(compression());
 app.use(cors());
-app.use(cookieParser('coffeeclub'));
+app.use(cookieParser(config.secret));
 app.use(expressSession());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public', config.cache ));
 
 load('models')
 	.then('controllers')

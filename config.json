@@ -9,8 +9,12 @@
   "oauth_method": "POST",
   "port": 3000,
   "members": ["brenopolanski"],
+  "secret": "coffeeclub",
   "mongodb": {
     "test": "mongodb://localhost/coffeeclub_test",
     "development": "mongodb://localhost/coffeeclub"
+  },
+  "cache": {
+    "maxAge": 3600000
   }
 }
