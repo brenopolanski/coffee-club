@@ -13,11 +13,43 @@
 	cd coffee-club && npm install
 	```
 
-3. Serve it
+3. Adjust config.json
+
+	```js
+	{
+	  "oauth_client_id": "27ea1ee40e7ace39f882",
+	  "oauth_client_secret": "7080ae473e475a2820633d59129afe00adbbf3d6",
+	  "oauth_redirect_uri": "http://localhost:3000/authenticate/",
+	  "oauth_scope": "user",
+	  "oauth_host": "github.com",
+	  "oauth_port": 443,
+	  "oauth_path": "/login/oauth/access_token",
+	  "oauth_method": "POST",
+	  "port": 3000,
+	  "members": ["brenopolanski"],
+	  "secret": "coffeeclub",
+	  "mongodb": {
+	    "test": "mongodb://localhost/coffeeclub_test",
+	    "development": "mongodb://localhost/coffeeclub"
+	  },
+	  "cache": {
+	    "maxAge": 3600000
+	  }
+	}
+	```
+
+4. Serve it
 
 	```
-	$ node server.js
+	$ npm start
 	```
+
+5. Execute tests
+
+	```
+	$ npm test
+	```
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/tests.png" />
 	
 ## Deploy on Heroku
 
