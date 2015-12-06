@@ -20,4 +20,16 @@ describe('The home controller', function() {
 			done();
 		});
 	});
+
+	describe('User not logged in', function() {
+		describe('Must to go for route /', function() {
+			it('when doing GET /home', function(done) {
+				request.get('/home')
+				.end(function(err, res) {
+					res.headers.location.should.eql('/');
+					done();
+				});
+			});
+		});
+	});
 });
