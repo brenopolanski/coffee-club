@@ -11,6 +11,10 @@ module.exports = function() {
 	var url = config.mongodb[env];
 	var singleConnection;
 
+	if (typeof url === 'undefined') {
+		url = env;
+	}
+
 	if (!singleConnection) {
 		singleConnection = mongoose.connect(url, function(err, res) {
 			if (err) { 

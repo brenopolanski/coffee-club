@@ -29,8 +29,8 @@ module.exports = function(app) {
 					UserModel.findOne(query)
 						.select('github_id name github_username profile_image coffees')
 						.exec(function(err, user) {
-							if (config.members.indexOf(user.github_username) !== -1) {
-								if (user) {
+							if (user) {
+								if (config.members.indexOf(user.github_username) !== -1) {
 									var date;
 
 									for (var i = 0; i < user.coffees.length; i++) {
@@ -49,35 +49,40 @@ module.exports = function(app) {
 									res.render('home/index', user);
 								}
 								else {
-									var userData = {
-										name            : data.name || data.login,
-										email           : data.email,
-										company         : data.company,
-										blog            : data.blog,
-										location        : data.location,
-										github_id       : data.id,
-										github_username : data.login,
-										profile_image   : data.avatar_url,
-										github_url      : data.html_url,
-										date            : dateFormat(now, 'dd-mmmm-yyyy')
-									};
+									res.redirect('/');
+								}
+							}
+							else {
+								var userData = {
+									name            : data.name || data.login,
+									email           : data.email,
+									company         : data.company,
+									blog            : data.blog,
+									location        : data.location,
+									github_id       : data.id,
+									github_username : data.login,
+									profile_image   : data.avatar_url,
+									github_url      : data.html_url,
+									date            : dateFormat(now, 'dd-mmmm-yyyy')
+								};
 
-									UserModel.create(userData, function(err, user) {
-										if (err) {
-											res.redirect('/');
-										}
-										else {
+								UserModel.create(userData, function(err, user) {
+									if (err) {
+										res.redirect('/');
+									}
+									else {
+										if (config.members.indexOf(user.github_username) !== -1) {
 											user.month = month;
 											user.amount = amount;
 
 											req.session.user = user._id;
 											res.render('home/index', user);
 										}
-									});
-								}
-							}
-							else {
-								res.redirect('/');
+										else {
+											res.redirect('/');
+										}
+									}
+								});
 							}
 						});
 				}
