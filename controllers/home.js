@@ -12,7 +12,7 @@ module.exports = function(app) {
 	var HomeController = {
 		index: function(req, res) {
 			var github = new Github({
-				token: app.token,
+				token: req.session.token,
 				auth: 'oauth'
 			});
 			var userGithubAPI = github.getUser();
@@ -90,7 +90,6 @@ module.exports = function(app) {
 		},
 
 		logout: function(req, res) {
-			app.token = null;
 			req.session.destroy();
 			res.redirect('/');
 		}
