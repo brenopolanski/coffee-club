@@ -14,7 +14,7 @@ module.exports = function(app) {
 				var result = err || !token ? { 'error': 'bad_code' } : { 'token': token };
 
 				if (result && result.token) {
-					app.token = result.token;
+					req.session.token = result.token;
 					res.redirect('/home');
 				}
 				else {
