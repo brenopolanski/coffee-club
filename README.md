@@ -1,5 +1,12 @@
 # The Coffee Club
 
+## Motivation
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/post-it.jpg" width="400" height="350" align="left">
+  <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" width="400" align="right">
+</p>
+
 ## Setup
 
 1. Clone it
