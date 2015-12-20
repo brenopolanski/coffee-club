@@ -2,10 +2,28 @@
 
 ## Motivation
 
+Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coffee machine. For some time, control of the capsules consumption was through notes made individually.
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/post-it.jpg" width="400" height="350" align="left">
-  <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" width="400" align="right">
+	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/post-it.jpg" width="430" height="373">
+	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" width="430">
 </p>
+
+## Screenshots
+
+### Desktop
+
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/desktop1.png" width="400" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/desktop2.png" width="400" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/desktop3.png" width="400" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/desktop4.png" width="400" />
+
+### Mobile
+
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile1.jpg" width="200" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile2.jpg" width="200" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile3.jpg" width="200" />
+<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile4.jpg" width="200" />
 
 ## Setup
 
@@ -97,22 +115,6 @@ OR
    ```
    heroku restart
    ```
-
-## Screenshots
-
-### Desktop
-
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop1.png" width="400" />
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop2.png" width="400" />
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop3.png" width="400" />
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/desktop4.png" width="400" />
-
-### Mobile
-
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/mobile1.jpg" width="200" />
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/mobile2.jpg" width="200" />
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/mobile3.jpg" width="200" />
-<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/mobile4.jpg" width="200" />
 
 ## Support
 
