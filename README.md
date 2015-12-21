@@ -84,11 +84,11 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 
 ## Gulp Tasks
 
-- `[gulp](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/default.js)`: Initialize stylus and watch for changes;
-- `[gulp bower-install](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/bower-install.js)`: Call for Bower Install;
-- `[gulp build](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/build.js)`: Call for PostCSS;
-- `[gulp stylus](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/stylus.js)`: Compile stylus files;
-- `[gulp watch](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/watch.js)`: Call for watch files.
+- `gulp`: Initialize stylus and watch for changes;
+- `gulp bower-install`: Call for Bower Install;
+- `gulp build`: Call for PostCSS;
+- `gulp stylus`: Compile stylus files;
+- `gulp watch`: Call for watch files.
 	
 ## Deploy on Heroku
 
