@@ -29,16 +29,16 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 
 1. Clone it:
 
-	```sh
-	$ git clone git@github.com:brenopolanski/coffee-club.git
+	```
+	git clone git@github.com:brenopolanski/coffee-club.git
 	```
 
 2. Install [NodeJS](https://nodejs.org/en/download/), [MongoDB](https://docs.mongodb.org/v3.0/installation/) and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally), if you don't have it yet.
 	
 3. Install Dependencies:
 	
-	```sh
-	$ cd coffee-club && npm install
+	```
+	cd coffee-club && npm install
 	```
 
 4. Adjust config.json:
@@ -71,14 +71,14 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 
 5. Serve it:
 
-	```sh
-	$ npm start
+	```
+	npm start
 	```
 
 6. Execute tests (optional):
 
-	```sh
-	$ npm test
+	```
+	npm test
 	```
 <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/tests.png" />
 	
