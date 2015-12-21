@@ -5,8 +5,8 @@
 Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coffee machine. For some time, control of the capsules consumption was through notes made individually.
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/post-it.jpg" width="430" height="373">
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" width="430">
+	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/post-it.jpg" width="430" height="373" />
+	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" width="430" />
 </p>
 
 ## Screenshots
@@ -27,20 +27,23 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 
 ## Setup
 
-1. Clone it
-	```
-	git clone git@github.com:brenopolanski/coffee-club.git
-	```
-	
-2. Install Dependencies
-	
-	```
-	cd coffee-club && npm install
+1. Clone it:
+
+	```sh
+	$ git clone git@github.com:brenopolanski/coffee-club.git
 	```
 
-3. Adjust config.json
+2. Install [NodeJS](https://nodejs.org/en/download/), [MongoDB](https://docs.mongodb.org/v3.0/installation/) and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally), if you don't have it yet.
+	
+3. Install Dependencies:
+	
+	```sh
+	$ cd coffee-club && npm install
+	```
 
-	```js
+4. Adjust config.json:
+
+	```javascript
 	{
 	  "oauth_client_id": "GITHUB_APPLICATION_CLIENT_ID",
 	  "oauth_client_secret": "GITHUB_APPLICATION_CLIENT_SECRET",
@@ -62,17 +65,19 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 	  }
 	}
 	```
-	Also see the [documentation on Github](https://developer.github.com/v3/oauth/).
+	Also see the [documentation on Github OAuth API](https://developer.github.com/v3/oauth/).
 
-4. Serve it
+> **Important**: Add your GitHub username in **members** property.
 
-	```
+5. Serve it:
+
+	```sh
 	$ npm start
 	```
 
-5. Execute tests
+6. Execute tests (optional):
 
-	```
+	```sh
 	$ npm test
 	```
 <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/master/screenshots/tests.png" />
