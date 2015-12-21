@@ -65,9 +65,9 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 	  }
 	}
 	```
+	> **Important**: Add your GitHub username in **members** property.
+	
 	Also see the [documentation on Github OAuth API](https://developer.github.com/v3/oauth/).
-
-> **Important**: Add your GitHub username in **members** property.
 
 5. Serve it:
 
