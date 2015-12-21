@@ -3,5 +3,5 @@
 // Necessary plugins
 var gulp = require('gulp');
 
-// Call Default
+// Call Build
 module.exports = gulp.task('build', ['postcss']);

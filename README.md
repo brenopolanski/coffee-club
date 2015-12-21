@@ -33,7 +33,7 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 	git clone git@github.com:brenopolanski/coffee-club.git
 	```
 
-2. Install [NodeJS](https://nodejs.org/en/download/), [MongoDB](https://docs.mongodb.org/v3.0/installation/) and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally), if you don't have it yet.
+2. Install [NodeJS](https://nodejs.org/en/download/), [MongoDB](https://docs.mongodb.org/v3.0/installation/) and [GulpJS](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally), if you don't have it yet.
 	
 3. Install Dependencies:
 	
@@ -81,6 +81,14 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 	npm test
 	```
 <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/tests.png" />
+
+## Gulp Tasks
+
+- `[gulp](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/default.js)`: Initialize stylus and watch for changes;
+- `[gulp bower-install](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/bower-install.js)`: Call for Bower Install;
+- `[gulp build](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/build.js)`: Call for PostCSS;
+- `[gulp stylus](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/stylus.js)`: Compile stylus files;
+- `[gulp watch](https://github.com/brenopolanski/coffee-club/blob/master/gulp/tasks/watch.js)`: Call for watch files.
 	
 ## Deploy on Heroku
 
