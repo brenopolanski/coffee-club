@@ -82,7 +82,7 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 	```
 <img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/tests.png" />
 
-## Gulp Tasks
+## Tasks
 
 - `gulp`: Initialize stylus and watch for changes;
 - `gulp bower-install`: Call for Bower Install;
