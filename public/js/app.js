@@ -3,77 +3,76 @@
  */
 var app = (function($, window, document, undefined) {
 
-	// undefined is used here as the undefined global variable in ECMAScript 3 is
-	// mutable (ie. it can be changed by someone else). undefined isn't really being
-	// passed in so we can ensure the value of it is truly undefined. In ES5, undefined
-	// can no longer be modified.
+  // undefined is used here as the undefined global variable in ECMAScript 3 is
+  // mutable (ie. it can be changed by someone else). undefined isn't really being
+  // passed in so we can ensure the value of it is truly undefined. In ES5, undefined
+  // can no longer be modified.
 
-	// window and document are passed through as local variable rather than global
-	// as this (slightly) quickens the resolution process and can be more efficiently
-	// minified (especially when both are regularly referenced in your plugin).
+  // window and document are passed through as local variable rather than global
+  // as this (slightly) quickens the resolution process and can be more efficiently
+  // minified (especially when both are regularly referenced in your plugin).
 
-	'use strict';
+  'use strict';
 
-	var module = {
-		loadingPage: function() {
-			setTimeout(function() {
-				$('div#loading-page').fadeOut(function() {
-					$(this).remove();
-				});
-			}, 1000);
-		},
-		
-		progress: function() {
-			var $ppc = $('.progress-pie-chart');
-			var percent = parseInt($ppc.data('percent'));
-			var deg = 360 * percent / 100;
+  var confirmAddCoffee = function(id, alertText, buttonId, baseUrl) {
+    $('#' + buttonId).on('click', function() {
+      notie.input(alertText, 'Yes', 'Cancel', 'text', 'How many?',
+        function(amount) {
+          notie.alert(1, 'Added with success!', 1.5);
+          setTimeout(function(argument) {
+            window.location = baseUrl + id + '?amount=' + amount;
+          }, 1500);
+      }, '1');
+    });
+  };
 
-			if (percent > 50) {
-				$ppc.addClass('gt-50');
-			}
+  var module = {
+    loadingPage: function() {
+      setTimeout(function() {
+        $('div#loading-page').fadeOut(function() {
+          $(this).remove();
+        });
+      }, 1000);
+    },
 
-			$('.ppc-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
-			$('.ppc-percents span').html(percent + ' <i class="fa fa-coffee"></i>');
-		},
+    progress: function() {
+      var $ppc = $('.progress-pie-chart');
+      var percent = parseInt($ppc.data('percent'));
+      var deg = 360 * percent / 100;
 
-		tablesaw: function() {
-			$(document).trigger('enhance.tablesaw');
-		},
+      if (percent > 50) {
+        $ppc.addClass('gt-50');
+      }
 
-		confirmAdd: function(id) {
-			$('#btn-add-coffee').on('click', function() {
-		        notie.confirm('Add coffee for you?', 'Yes', 'Cancel', function() {
-		            notie.alert(1, 'Added with success!', 1.5);
-		            setTimeout(function(argument) {
-		        		window.location = '/coffee/' + id;
-		            }, 1500);
-		        });
-	        });
-		},
+      $('.ppc-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
+      $('.ppc-percents span').html(percent + ' <i class="fa fa-coffee"></i>');
+    },
 
-		confirmGuest: function(id) {
-			$('#btn-add-guest').on('click', function() {
-	            notie.confirm('Add coffee for the guest?', 'Yes', 'Cancel', function() {
-	                notie.alert(1, 'Added with success!', 1.5);
-	                setTimeout(function(argument) {
-	            		window.location = '/coffee/guest/' + id;
-	                }, 1500);
-	            });
-	        });
-		},
+    tablesaw: function() {
+      $(document).trigger('enhance.tablesaw');
+    },
 
-		init: function(userID) {
-			var id = userID;
-			module.loadingPage();
-			module.progress();
-			module.tablesaw();
-			module.confirmAdd(id);
-			module.confirmGuest(id);
-		}
-	};
+    confirmAdd: function(id) {
+      confirmAddCoffee(id, 'Add coffee for you?', 'btn-add-coffee', '/coffee/');
+    },
 
-	return {
-		init: module.init
-	}
+    confirmGuest: function(id) {
+      confirmAddCoffee(id, 'Add coffee for a guest?', 'btn-add-guest',
+                      '/coffee/guest/');
+    },
+
+    init: function(userID) {
+      var id = userID;
+      module.loadingPage();
+      module.progress();
+      module.tablesaw();
+      module.confirmAdd(id);
+      module.confirmGuest(id);
+    }
+  };
+
+  return {
+    init: module.init
+  }
 
 }(jQuery, window, document));
