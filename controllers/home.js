@@ -34,16 +34,17 @@ module.exports = function(app) {
 									var date;
 
 									for (var i = 0; i < user.coffees.length; i++) {
-										date = user.coffees[i].date;
+										var coffee = user.coffees[i];
+										date = coffee.date;
 										date = date.split('-')[1];
 
 										if (date === month) {
-											amount++;
+											amount += Number(coffee.amount);
 										}
 									}
 
 									user.month = month;
-									user.amount = amount;
+									user.amount = Math.round(amount);
 
 									req.session.user = user._id;
 									res.render('home/index', user);
