@@ -6,12 +6,14 @@ var plumber = require('gulp-plumber');
 var bower   = require('gulp-bower');
 var paths   = require('../paths');
 
+// Call Bower
 gulp.task('bower', function() {
 	return bower()
 		.pipe(gulp.dest(paths.source.bowerDir));
 });
 
-gulp.task('fontAwesome', function() {
+// Call Font Awesome
+gulp.task('fontAwesome', ['bower'], function() {
 	gulp.src(paths.source.bowerDir + '/font-awesome/css/font-awesome.min.css')
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.build.css));
@@ -20,17 +22,20 @@ gulp.task('fontAwesome', function() {
 		.pipe(gulp.dest(paths.build.fonts));
 });
 
-gulp.task('jquery', function() {
+// Call jQuery
+gulp.task('jquery', ['bower'], function() {
 	gulp.src(paths.source.bowerDir + '/jquery/dist/jquery.min.js')
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.build.js));
 });
 
-gulp.task('notie', function() {
+// Call Notie
+gulp.task('notie', ['bower'], function() {
 	gulp.src(paths.source.bowerDir + '/notie/notie.js')
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.build.js));
 });
 
 // Call Bower Install
-module.exports = gulp.task('bower-install', ['bower', 'fontAwesome', 'jquery', 'notie']);
+module.exports = gulp.task('bower-install',
+	['bower', 'fontAwesome', 'jquery', 'notie']);
