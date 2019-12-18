@@ -14,19 +14,19 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 ### Desktop
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop1.png" width="400" />
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop2.png" width="400" />
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop3.png" width="400" />
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop4.png" width="400" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop1.png" width="430" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop2.png" width="430" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop3.png" width="430" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop4.png" width="430" />
 </p>
 
 ### Mobile
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile1.jpg" width="200" />
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile2.jpg" width="200" />
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile3.jpg" width="200" />
-	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile4.jpg" width="200" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile1.jpg" width="210" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile2.jpg" width="210" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile3.jpg" width="210" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile4.jpg" width="210" />
 </p>
 
 ## Setup
@@ -136,7 +136,7 @@ Use the button below to instantly setup your own Coffee Club instance on Heroku.
     heroku restart
     ```
 
-##Deploy on Azure
+## Deploy on Azure
 
 ### Azure Button
 
