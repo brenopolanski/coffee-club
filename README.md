@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coffee machine. For some time, control of the capsules consumption was through notes made individually.
+Sometime ago at [CG Hackspace](https://github.com/cghackspace), we bought a coffee machine. For sometime, the control of the capsules consumption was through notes made individually.
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/post-it.jpg" width="430" height="373" />
