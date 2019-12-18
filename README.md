@@ -13,83 +13,89 @@ Some time ago in [CG Hackspace](http://www.cghackspace.org), we acquired an coff
 
 ### Desktop
 
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop1.png" width="400" />
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop2.png" width="400" />
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop3.png" width="400" />
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop4.png" width="400" />
+<p align="center">
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop1.png" width="400" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop2.png" width="400" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop3.png" width="400" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/desktop4.png" width="400" />
+</p>
 
 ### Mobile
 
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile1.jpg" width="200" />
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile2.jpg" width="200" />
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile3.jpg" width="200" />
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile4.jpg" width="200" />
+<p align="center">
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile1.jpg" width="200" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile2.jpg" width="200" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile3.jpg" width="200" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile4.jpg" width="200" />
+</p>
 
 ## Setup
 
-1. Clone it:
+1.  Clone it:
 
-	```
-	git clone git@github.com:brenopolanski/coffee-club.git
-	```
+    ```
+    git clone git@github.com:brenopolanski/coffee-club.git
+    ```
 
-2. Install [NodeJS](https://nodejs.org/en/download/), [MongoDB](https://docs.mongodb.org/v3.0/installation/) and [GulpJS](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally), if you don't have it yet.
-	
-3. Install Dependencies:
-	
-	```
-	cd coffee-club && npm install
-	```
+2.  Install [NodeJS](https://nodejs.org/en/download/), [MongoDB](https://docs.mongodb.org/v3.0/installation/) and [GulpJS](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally), if you don't have it yet.
 
-4. Adjust config.json:
+3.  Install Dependencies:
 
-	```javascript
-	{
-	  "oauth_client_id": "GITHUB_APPLICATION_CLIENT_ID",
-	  "oauth_client_secret": "GITHUB_APPLICATION_CLIENT_SECRET",
-	  "oauth_redirect_uri": "GITHUB_APPLICATION_REDIRECT",
-	  "oauth_scope": "user",
-	  "oauth_host": "github.com",
-	  "oauth_port": 443,
-	  "oauth_path": "/login/oauth/access_token",
-	  "oauth_method": "POST",
-	  "port": 3000,
-	  "members": ["brenopolanski"],
-	  "secret": "coffeeclub",
-	  "mongodb": {
-	    "test": "mongodb://localhost/coffeeclub_test",
-	    "development": "mongodb://localhost/coffeeclub"
-	  },
-	  "cache": {
-	    "maxAge": 3600000
-	  }
-	}
-	```
-	> **Important**: Add your GitHub username in `members` property.
-	
-	Also see the [documentation on Github OAuth API](https://developer.github.com/v3/oauth/).
+    ```
+    cd coffee-club && npm install
+    ```
 
-5. Serve it:
+4.  Adjust config.json:
 
-	```
-	npm start
-	```
+    ```javascript
+    {
+      "oauth_client_id": "GITHUB_APPLICATION_CLIENT_ID",
+      "oauth_client_secret": "GITHUB_APPLICATION_CLIENT_SECRET",
+      "oauth_redirect_uri": "GITHUB_APPLICATION_REDIRECT",
+      "oauth_scope": "user",
+      "oauth_host": "github.com",
+      "oauth_port": 443,
+      "oauth_path": "/login/oauth/access_token",
+      "oauth_method": "POST",
+      "port": 3000,
+      "members": ["brenopolanski"],
+      "secret": "coffeeclub",
+      "mongodb": {
+        "test": "mongodb://localhost/coffeeclub_test",
+        "development": "mongodb://localhost/coffeeclub"
+      },
+      "cache": {
+        "maxAge": 3600000
+      }
+    }
+    ```
 
-6. Execute tests (optional):
+    > **Important**: Add your GitHub username in `members` property.
 
-	```
-	npm test
-	```
-<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/tests.png" />
+    Also see the [documentation on Github OAuth API](https://developer.github.com/v3/oauth/).
+
+5.  Serve it:
+
+    ```
+    npm start
+    ```
+
+6.  Execute tests (optional):
+
+        ```
+        npm test
+        ```
+
+    <img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/tests.png" />
 
 ## Tasks
 
-- `gulp`: Initialize stylus and watch for changes;
-- `gulp bower-install`: Call for Bower Install;
-- `gulp build`: Call for PostCSS;
-- `gulp stylus`: Compile stylus files;
-- `gulp watch`: Call for watch files.
-	
+-   `gulp`: Initialize stylus and watch for changes;
+-   `gulp bower-install`: Call for Bower Install;
+-   `gulp build`: Call for PostCSS;
+-   `gulp stylus`: Compile stylus files;
+-   `gulp watch`: Call for watch files.
+
 ## Deploy on Heroku
 
 ### Heroku Button
@@ -102,32 +108,33 @@ Use the button below to instantly setup your own Coffee Club instance on Heroku.
 
 1. Create a new Heroku app
 
-   ```
-   heroku apps:create APP_NAME
-   ```
-   
+    ```
+    heroku apps:create APP_NAME
+    ```
+
 2. Add Addons MongoLab
 
-   ```
-   heroku addons:add mongolab
-   ```
+    ```
+    heroku addons:add mongolab
+    ```
 
 3. Provide OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
 
-   ```
-   heroku config:set OAUTH_CLIENT_ID=XXXX OAUTH_CLIENT_SECRET=YYYY
-   ```
+    ```
+    heroku config:set OAUTH_CLIENT_ID=XXXX OAUTH_CLIENT_SECRET=YYYY
+    ```
 
 4. Push changes to heroku
 
-   ```
-   git push heroku master
-   ```
-OR
+    ```
+    git push heroku master
+    ```
 
-   ```
-   heroku restart
-   ```
+    OR
+
+    ```
+    heroku restart
+    ```
 
 ##Deploy on Azure
 
@@ -141,36 +148,36 @@ Use the button below to instantly setup your own Gatekeeper instance on Azure.
 
 1. Create a new Azure site
 
-   ```
-   azure site create SITE_NAME --git
-   ```
-   
+    ```
+    azure site create SITE_NAME --git
+    ```
+
 2. Provide OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
 
-   ```
-   azure site appsetting add OAUTH_CLIENT_ID=XXXX 
-   azure site appsetting add OAUTH_CLIENT_SECRET=YYYY
-   ```
+    ```
+    azure site appsetting add OAUTH_CLIENT_ID=XXXX
+    azure site appsetting add OAUTH_CLIENT_SECRET=YYYY
+    ```
 
 3. Push changes to Azure
 
-   ```
-   git push azure master
-   ```
+    ```
+    git push azure master
+    ```
 
 ## Support
 
-### Browser
+### Browser Support
 
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/edge/edge_48x48.png) | **Android** | **iOS** | **Windows Phone** |
-:---: | :---: | :---: | :---: | :---: |  :---: | :---: | :---: | :---: |
-Latest ✔ | Latest ✔ | 11+ ✔ | Latest ✔ | 8.0+ ✔ | Latest ✔ | 4.4+ ✔ | 7+ ✔ | 8+ ✔ |
+| ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png) |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| Latest ✔                                                                                      | Latest ✔                                                                                            | Latest ✔                                                                                               | Latest ✔                                                                                         | Latest ✔                                                                                            |
 
 ### Server
 
-<a href="https://nodejs.org"><img height=48 src="https://raw.githubusercontent.com/caiogondim/javascript-server-side-logos/master/node.js/standard/454x128.png"></a> |
---- |
-0.10+ ✔ |
+| <a href="https://nodejs.org"><img height=48 src="https://raw.githubusercontent.com/caiogondim/javascript-server-side-logos/master/node.js/standard/454x128.png"></a> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0.10+ ✔                                                                                                                                                              |
 
 ## Contributing
 
@@ -182,4 +189,4 @@ For detailed changelog, see [Releases](https://github.com/brenopolanski/coffee-c
 
 ## License
 
-[MIT License](http://brenopolanski.mit-license.org/) © Breno Polanski
+[MIT License](https://brenopolanski.mit-license.org/) © Breno Polanski
